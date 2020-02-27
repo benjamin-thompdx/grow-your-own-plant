@@ -14,16 +14,16 @@ namespace Models
     StateOfMind = "neutral";
   }
 
-  public void DetermineNextSteps()
-  {
-    AddWater();
-    AddFood();
-    AddSunshine();
-    UpdateMood();
-    IsPlantDead();
-  }
+  // public void DetermineNextSteps()
+  // {
+  //   AddWater();
+  //   AddFood();
+  //   AddSunshine();
+  //   UpdateMood();
+  //   IsPlantDead();
+  // }
 
-  private void UpdateMood()
+  public void UpdateMood()
   {
     if (PlantHealth > 10)
     {
@@ -39,7 +39,7 @@ namespace Models
     }
   }
 
-  private string IsPlantDead()
+  public string IsPlantDead()
   {
     if (StateOfMind == "dead")
     {
@@ -50,18 +50,17 @@ namespace Models
       return "Keep playing...";
     }
   }
-
-  private void AddWater()
+  public void AddWater()
   {
     PlantHealth += 1;
   }
 
-  private void AddFood()
+  public void AddFood()
   {
     PlantHealth += 2;
   }
 
-  private void AddSunshine()
+  public void AddSunshine()
   {
     PlantHealth += 3;
   }

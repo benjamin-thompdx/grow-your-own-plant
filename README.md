@@ -1,12 +1,12 @@
-# _Higher/Lower Game_
+# _Grow Your Own Plant_
 
-#### _An application that lets a use rplay the Higher Lower Game against the computer. , Feb 2020_
+#### _An application to grow your own plant. , Feb 27 2020_
 
-#### By _**Patrick Kille & Benjamin Thom**_
+#### By _**Fatma Dogan & Benjamin Thom**_
 
 ## Description
 
-A user enters a number and the computer will guess the user's number. The game ends when the computer guesses the correct number.
+A user must take actionsd to keep their plant alive.
 
 ## Preview
 ![Landing Page Preview](img/image file name here)
@@ -15,11 +15,10 @@ A user enters a number and the computer will guess the user's number. The game e
 
 | Behavior | Input | Output |
 |---|:---:|:---:|
-|User chooses a number between 1-100|NA|NA|
-|Computer displays initial guess|NA|50|
-|User responds higher|"higher"|Computer changes lower limit to previous guess (50-100)|
-|User responds lower|"lower"|Computer changes upper limit to previous guess (1-50)|
-|User responds correct|"correct"|"Computer is victorious!"|
+|User Names plant|"Lucy"|Lucy|
+|User waters plant|"water"|+1 plant health|
+|User feeds plant|"feed"|+2 plant health|
+|User gives plant sunshine|"sunshine"|+3 plant health|
 
 ## Setup/Installation Requirements
 
@@ -66,4 +65,4 @@ _Have a bug or an issue with this application? [Open a new issue](https://github
 
 [MIT](https://choosealicense.com/licenses/mit/)
 
-Copyright (c) 2020 **_Patrick Kille & Benjamin Thom_**
+Copyright (c) 2020 **_Fatma Dogan & Benjamin Thom_**

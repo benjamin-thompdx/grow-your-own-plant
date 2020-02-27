@@ -10,22 +10,35 @@ namespace Models
   public Plant(string name)
   {
     Name = name;
-    PlantHealth = 10;
+    PlantHealth = 5;
     StateOfMind = "neutral";
   }
 
-  // public void DetermineNextSteps()
-  // {
-  //   AddWater();
-  //   AddFood();
-  //   AddSunshine();
-  //   UpdateMood();
-  //   IsPlantDead();
-  // }
-
-  public void UpdateMood()
+  public void DetermineNextSteps(string addPlantHealth)
   {
-    if (PlantHealth > 10)
+    if (addPlantHealth == "water")
+    {
+      AddWater();
+      UpdateMood();
+      IsPlantDead();
+    }
+    else if (addPlantHealth == "food")
+    {
+      AddFood();
+      UpdateMood();
+      IsPlantDead();
+    }
+    else if (addPlantHealth == "sun")
+    {
+      AddSunshine();
+      UpdateMood();
+      IsPlantDead();
+    }
+  }
+
+  private void UpdateMood()
+  {
+    if (PlantHealth >= 10)
     {
       StateOfMind = "healthy";
     }
@@ -39,7 +52,7 @@ namespace Models
     }
   }
 
-  public string IsPlantDead()
+  private string IsPlantDead()
   {
     if (StateOfMind == "dead")
     {
@@ -50,17 +63,17 @@ namespace Models
       return "Keep playing...";
     }
   }
-  public void AddWater()
+  private void AddWater()
   {
     PlantHealth += 1;
   }
 
-  public void AddFood()
+  private void AddFood()
   {
     PlantHealth += 2;
   }
 
-  public void AddSunshine()
+  private void AddSunshine()
   {
     PlantHealth += 3;
   }

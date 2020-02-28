@@ -31,20 +31,22 @@ namespace Models
       AddFood();
       RemoveHealth();
       UpdateMood();
-      
     }
     else if (addPlantHealth == "sun")
     {
       AddSunshine();
       RemoveHealth();
       UpdateMood();
-      
     }
   }
 
   private void UpdateMood()
   {
-    if (PlantHealth >= 10)
+    if (PlantHealth >= 20)
+    {
+      StateOfMind = "full growth";
+    }
+    else if (PlantHealth >= 10)
     {
       StateOfMind = "healthy";
     }
@@ -76,7 +78,7 @@ namespace Models
   private void RemoveHealth()
   {
     var rand = new Random();
-    int index = rand.Next(4);
+    int index = rand.Next(7);
 
     if (index == 1)
     {
